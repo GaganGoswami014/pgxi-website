@@ -1,73 +1,137 @@
-# Welcome to your Lovable project
+# PG-XI Creatives Website
 
-## Project info
+Official website for **PG-XI Creatives** — a performance-focused creative agency delivering strategy, design, and digital growth solutions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 Live Website
 
-## How can I edit this code?
+https://pgxicreatives.netlify.app
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+# 🚀 Project Overview
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This project contains the complete source code for the PG-XI Creatives website including:
 
-Changes made via Lovable will be committed automatically to this repo.
+* Landing pages
+* Blog system
+* Responsive UI
+* SEO-optimized structure
+* Admin-controlled content (via Supabase)
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# 🧰 Technologies Used
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+This project is built with modern web technologies:
 
-Follow these steps:
+* **React**
+* **TypeScript**
+* **Vite**
+* **Tailwind CSS**
+* **shadcn/ui**
+* **Supabase**
+* **Netlify**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 📁 Project Structure
 
-# Step 3: Install the necessary dependencies.
-npm i
+```
+src/
+ ├ components
+ ├ pages
+ ├ hooks
+ ├ assets
+ └ integrations
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+public/
+ ├ logo-dark.png
+ ├ logo-light.png
+ ├ favicon.ico
+ └ _redirects
+```
+
+---
+
+# 💻 Running the Project Locally
+
+Make sure **Node.js** and **npm** are installed.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/GaganGoswami014/pgxi-website.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd pgxi-website
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+# 🌍 Deployment
 
-**Use GitHub Codespaces**
+This project is deployed using **Netlify**.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Deployment flow:
 
-## What technologies are used for this project?
+```
+GitHub
+   ↓
+Netlify Build
+   ↓
+Live Website
+```
 
-This project is built with:
+Every push to the repository automatically triggers a new deployment.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+# 🔐 Backend Services
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This project integrates with the following services:
 
-## Can I connect a custom domain to my Lovable project?
+* **Supabase** → Authentication & Database
+* **Render** → OTP verification server
+* **Resend** → Email delivery
+* **Netlify** → Website hosting
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+# 📈 Features
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+* Modern responsive UI
+* Blog system
+* SEO optimized
+* Admin panel integration
+* Dynamic content support
+* Secure OTP authentication for admin
+
+---
+
+# 👨‍💻 Developed By
+
+**Gagan Goswami**
+Founder — PG-XI Creatives
+
+Website: https://pgxicreatives.netlify.app
+
+---
+
+# 📄 License
+
+© 2026 PG-XI Creatives. All rights reserved.
