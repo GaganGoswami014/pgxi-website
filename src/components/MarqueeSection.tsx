@@ -10,7 +10,7 @@ const items = [
 const MarqueeSection = () => {
   const content = items.map((item, i) => (
     <span key={i} className="flex items-center gap-6 shrink-0">
-      <span className="text-3xl md:text-5xl font-display font-bold text-foreground/90 whitespace-nowrap">
+      <span className="marquee-font text-3xl md:text-5xl font-bold tracking-widest uppercase text-foreground/90 whitespace-nowrap">
         {item}
       </span>
       <span className="text-primary text-lg">✦</span>
@@ -19,14 +19,18 @@ const MarqueeSection = () => {
 
   return (
     <section className="py-16 overflow-hidden relative bg-card border-y border-border">
-      {/* Edge blur */}
+      
+      {/* Left blur */}
       <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-card to-transparent z-10" />
+      
+      {/* Right blur */}
       <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-card to-transparent z-10" />
 
       <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused]">
         {content}
         {content}
       </div>
+
     </section>
   );
 };
