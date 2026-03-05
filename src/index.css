@@ -1,0 +1,369 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 98%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 43 72% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 30% 15%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 43 72% 47%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 43 72% 47%;
+
+    --radius: 0.75rem;
+
+    --gold: 43 72% 47%;
+    --navy: 215 30% 15%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 7%;
+    --sidebar-primary: 43 72% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 94%;
+    --sidebar-accent-foreground: 0 0% 7%;
+    --sidebar-border: 220 13% 90%;
+    --sidebar-ring: 43 72% 47%;
+  }
+
+  .dark {
+    --background: 220 20% 6%;
+    --foreground: 220 20% 95%;
+
+    --card: 220 20% 9%;
+    --card-foreground: 220 20% 95%;
+
+    --popover: 220 20% 9%;
+    --popover-foreground: 220 20% 95%;
+
+    --primary: 43 72% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 30% 70%;
+    --secondary-foreground: 220 20% 6%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 43 72% 47%;
+    --accent-foreground: 220 20% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 43 72% 47%;
+
+    --gold: 43 72% 47%;
+    --navy: 215 30% 70%;
+
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 220 20% 95%;
+    --sidebar-primary: 43 72% 47%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 15%;
+    --sidebar-accent-foreground: 220 20% 95%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 43 72% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  ::selection {
+    background: hsl(var(--gold) / 0.2);
+    color: hsl(var(--foreground));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+}
+
+/* ============================================
+   BLOG CONTENT — Rich HTML Typography
+   ============================================ */
+
+.blog-content {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: hsl(var(--foreground));
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Headings */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  line-height: 1.25;
+  color: hsl(var(--foreground));
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h1 { font-size: 2.25rem; }
+.blog-content h2 {
+  font-size: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+}
+.blog-content h3 { font-size: 1.375rem; }
+.blog-content h4 { font-size: 1.125rem; }
+.blog-content h5 { font-size: 1rem; }
+.blog-content h6 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: hsl(var(--muted-foreground));
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 1.6rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.blog-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong & Em */
+.blog-content strong {
+  font-weight: 700;
+  color: hsl(var(--foreground));
+}
+
+.blog-content em {
+  font-style: italic;
+}
+
+/* Links */
+.blog-content a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.15s ease;
+}
+
+.blog-content a:hover {
+  opacity: 0.75;
+}
+
+/* Lists */
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.6rem;
+  padding-left: 1.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.blog-content li::marker {
+  color: hsl(var(--primary));
+}
+
+/* Nested lists */
+.blog-content ul ul,
+.blog-content ol ol,
+.blog-content ul ol,
+.blog-content ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquote */
+.blog-content blockquote {
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid hsl(var(--primary));
+  background: hsl(var(--muted));
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: hsl(var(--foreground));
+  font-style: italic;
+}
+
+.blog-content blockquote p {
+  margin-bottom: 0;
+  color: hsl(var(--foreground));
+}
+
+/* Code */
+.blog-content code {
+  font-size: 0.875em;
+  background: hsl(var(--muted));
+  color: hsl(var(--primary));
+  padding: 0.2em 0.45em;
+  border-radius: 0.35rem;
+  font-family: 'Fira Code', 'Courier New', monospace;
+}
+
+.blog-content pre {
+  background: hsl(var(--secondary));
+  color: hsl(220 20% 90%);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.6rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.blog-content pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+/* Horizontal Rule */
+.blog-content hr {
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+  margin: 2.5rem 0;
+}
+
+/* Tables */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.6rem;
+  font-size: 0.9375rem;
+}
+
+.blog-content th {
+  background: hsl(var(--muted));
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid hsl(var(--border));
+}
+
+.blog-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid hsl(var(--border));
+  color: hsl(var(--muted-foreground));
+}
+
+.blog-content tr:last-child td {
+  border-bottom: none;
+}
+
+/* ============================================
+   IMAGE HANDLING — 16:9 responsive containers
+   ============================================ */
+
+/* All images inside blog content get wrapped in a 16:9 container */
+.blog-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.875rem;
+  margin: 2rem 0;
+  object-fit: cover;
+}
+
+/* When an img is inside a <p>, break it out visually */
+.blog-content p img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wrap standalone images in 16:9 aspect container via JS-free CSS trick */
+.blog-content figure {
+  margin: 2rem 0;
+}
+
+.blog-content figure img {
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.875rem;
+}
+
+.blog-content figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+/* Force all blog images to maintain 16:9 and not overflow */
+.blog-content img:not([width]) {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  max-width: 100%;
+}
