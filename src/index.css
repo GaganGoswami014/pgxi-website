@@ -370,3 +370,36 @@
   object-fit: cover;
   max-width: 100%;
 }
+
+/* ============================================
+   CUSTOM FONTS — Marquee Section Only
+   ============================================ */
+
+@font-face {
+  font-family: 'ITC Bauhaus';
+  src: url('/fonts/bauhaus.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: url('/fonts/avant-garde.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ITC Benguiat';
+  src: url('/fonts/benguiat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Marquee font — ITC Avant Garde Gothic as primary, Space Grotesk as fallback */
+.marquee-font {
+  font-family: 'ITC Avant Garde Gothic', 'Space Grotesk', sans-serif;
+}
